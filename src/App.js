@@ -1,10 +1,13 @@
+import Navbar from './components/Navbar';
+import Timer from './components/TImer';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <>
+      <Navbar />
+      <Timer />
+    </>
   );
 }
 

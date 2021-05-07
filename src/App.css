@@ -1,7 +1,18 @@
-body {
-  margin: 0;
+:root {
+  --main-colour: hsl(2, 66%, 58%);
+  --secondary-colour:  hsl(357, 74%, 67%);
 }
 
-.App {
-  text-align: center;
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-size: 2rem;
+  font-family: 'Rubik', sans-serif;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
 }

@@ -1,0 +1,65 @@
+body {
+	background: var(--main-colour);
+}
+
+#timer-container {
+	height: fit-content;
+	width: fit-content;
+	margin: 3em auto;
+	padding: 1em;
+	padding-bottom: 1.5em;
+	background: var(--secondary-colour);
+	color: #fceeed;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#time-options button{
+	background: var(--secondary-colour);
+	border: none;
+	outline: none;
+	color: #fceeed;
+	font-size: 0.8em;
+	padding: 5px;
+}
+
+#time-options button:hover, #start-button:hover {
+	cursor: pointer;
+	filter: brightness(120%);
+}
+
+#current-time {
+	font-size: 6em;
+	margin: 0.2em;
+}
+
+#start-button {
+	background: white;
+	box-shadow: rgb(235 235 235) 0px 6px 0px;
+	padding: 22px;
+	outline: none;
+	border: none;
+	font-size: 1em;
+	font-weight: bold;
+	color: var(--main-colour);
+}
+
+@media only screen and (max-width: 420px) {
+	#timer-container {
+		padding: 0.5em;
+	}
+	#current-time {
+		font-size: 4em;
+	}
+}
+
+@media only screen and (max-width: 290px) {
+	#time-options button {
+		font-size: 0.6em;
+	}
+	#current-time {
+		font-size: 3em;
+	}
+}
