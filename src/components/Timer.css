@@ -25,7 +25,7 @@ body {
 	padding: 5px;
 }
 
-#time-options button:hover, #start-button:hover {
+#time-options button:hover, .timer-control:hover {
 	cursor: pointer;
 	filter: brightness(120%);
 }
@@ -35,7 +35,7 @@ body {
 	margin: 0.2em;
 }
 
-#start-button {
+.timer-control {
 	background: white;
 	box-shadow: rgb(235 235 235) 0px 6px 0px;
 	padding: 22px;
@@ -44,6 +44,17 @@ body {
 	font-size: 1em;
 	font-weight: bold;
 	color: var(--main-colour);
+}
+
+#button-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#pause-button, #resume-button{
+	position: relative;
+	right: 1em;
 }
 
 @media only screen and (max-width: 420px) {

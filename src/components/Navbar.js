@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 
-function Navbar() {
+function Navbar(props) {
 	const [click, setClick] = useState(false);
 	const handleClick = () => setClick(!click);
 
@@ -14,8 +14,23 @@ function Navbar() {
 		}
 	}
 	window.addEventListener("click", showSettings)
-
 	const closeSettings = () => setClick(false)
+
+	const handleChange = (e) => {
+		switch(e.target.id){
+			case "pomodoro":
+				props.setPomoTimer(e.target.value * 60);
+				break;
+			case "short":
+				props.setShortTimer(e.target.value * 60);
+				break;
+			case "long":
+				props.setLongTimer(e.target.value * 60);
+				break;
+			default:
+				return;
+		}
+	}
 
 	return (
 		<>
@@ -38,9 +53,9 @@ function Navbar() {
 					<label for="pomodoro">Pomodoro</label>
 					<label for="short">Short break</label>
 					<label for="long">Long break</label>
-					<input id="pomodoro" type="number" min="10" max="60" placeholder="25" />
-					<input id="short" type="number" min="2" max="10" placeholder="5" />
-					<input id="pomodoro" type="number" min="11" max="30" placeholder="15" />
+					<input id="pomodoro" type="number" min="10" max="60" onChange={handleChange} value={props.pomoTimer/60} />
+					<input id="short" type="number" min="2" max="10" onChange={handleChange} value={props.shortTimer/60} />
+					<input id="long" type="number" min="11" max="30" onChange={handleChange} value={props.longTimer/60} />
 				</div>
 			</div>
 		</div>}
