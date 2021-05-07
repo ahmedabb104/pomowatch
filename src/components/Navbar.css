@@ -36,6 +36,10 @@
 	width: 30rem;
 	font-size: 1em;
 	backdrop-filter: blur(10px);
+	/* for IE */
+	box-shadow: 0 0 0 1000px rgba(0,0,0,.3);
+	/* for real browsers */
+	box-shadow: 0 0 0 100vmax rgba(0,0,0,.3);
 	border-radius: 10px;
 	display: flex;
 	flex-direction: column;

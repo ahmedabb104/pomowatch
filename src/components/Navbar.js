@@ -20,7 +20,7 @@ function Navbar() {
 	return (
 		<>
 		<nav id='nav-container'>
-			<h1><i className="fa fa-hourglass-end" /> Pomowatch</h1>
+			<h1><i className="fa fa-hourglass-end" /> PomoWatch</h1>
 			<div className="buttons-container">
 				<button id="settings-button" className="button" onClick={handleClick}><i className="fa fa-cog" /> Settings</button>
 				<a id="github-button" className="button" href="https://github.com/ahmedabb104/pomowatch" target="_blank" rel="noreferrer"><i className="fa fa-github" /> Github</a>
