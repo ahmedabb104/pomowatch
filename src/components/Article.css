@@ -1,0 +1,81 @@
+#section-container {
+	background: whitesmoke;
+	color: #541c1f;
+	padding: 3em 18em;
+	line-height: 1.5em;
+}
+
+#section-container h1 {
+	font-size: 1.7em;
+	margin-bottom: 1.5em;
+	line-height: 1.5em;
+}
+
+.article {
+	margin-bottom: 2em;
+}
+
+.article h2 {
+	font-size: 1.2em;
+	margin-bottom: 0.5em;
+}
+
+.article h2::after {
+	content: '';
+    display: block;
+	width: 24px;
+    padding-top: 8px;
+    border-bottom: 4px solid #f05b56;
+    opacity: 0.6;
+	margin-bottom: 1em;
+}
+
+.article p {
+	font-size: 0.9em;
+	color: #785e60;
+}
+
+@media only screen and (max-width: 1125px) {
+	#section-container {
+		padding: 3em 10em;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	#section-container {
+		padding: 3em 7em;
+	}
+}
+
+@media only screen and (max-width: 750px) {
+	#section-container {
+		padding: 3em 4em;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	#section-container {
+		padding: 3em 2em;
+	}
+	#section-container h1 {
+		font-size: 1.3em;
+	}
+}
+
+@media only screen and (max-width: 475px) {
+	.article h2 {
+		font-size: 0.9em;
+	}
+	.article p {
+		font-size: 0.7em;
+	}
+}
+
+@media only screen and (max-width: 340px) {
+	#section-container {
+		padding: 3em 1em;
+	}
+	#section-container h1 {
+		font-size: 1em;
+	}
+}

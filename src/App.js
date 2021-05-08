@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Timer from './components/TImer';
+import Article from './components/Article';
+import Footer from './components/Footer';
 import './App.css';
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
              pomoTimer={pomoTimer} setPomoTimer={setPomoTimer}
              shortTimer={shortTimer} setShortTimer={setShortTimer}
              longTimer={longTimer} setLongTimer={setLongTimer}/>
+      <Article />
+      <Footer />
     </>
   );
 }

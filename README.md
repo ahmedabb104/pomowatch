@@ -1,9 +1,12 @@
-# Still under development!  
-***
 # PomoWatch  
-A flexible pomodoro timer. Stay focused.
+
+A flexible pomodoro timer. Clone of https://pomofocus.io/
 ***
 ### Technologies used:  
-- React
+- React (first time using Hooks)
 - CSS
-- HTML 
+- HTML  
+***  
+### Known issues:
+- Times will not change with settings until you click the timer again
+- Settings will not be saved when you refresh the page

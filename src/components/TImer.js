@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './Timer.css';
 
 function Timer(props) {
@@ -69,6 +69,14 @@ function Timer(props) {
 		return `${finalMinutes}:${seconds}`
 	}
 
+	useEffect(() => {
+		if (props.timer === 0){
+			let notification = new Audio('https://freesound.org/data/previews/316/316798_5383582-lq.mp3');
+			notification.play();
+			handleReset();
+		}
+	})
+
 	return (
 		<>
 		<div id="timer-container">
@@ -83,7 +91,7 @@ function Timer(props) {
 			<div id="button-container">
 				{isPaused ? <button id="pause-button" className="timer-control" onClick={handlePause}><i className="fa fa-pause" /></button> :
 				<button id="resume-button" className="timer-control" onClick={handleResume}><i className="fa fa-play" /></button>}
-				<button id="reset-button" className="timer-control" onClick={handleReset}><i className="fa fa-power-off" /></button>
+				<button id="reset-button" className="timer-control" onClick={handleReset}><i className="fa fa-redo" /></button>
 			</div>}
 		</div>
 		</>
